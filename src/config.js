@@ -27,7 +27,7 @@ const Header = () => {
         />
         <meta name='robots' content='index,follow' />
         <meta name='distribution' content='web' />
-        {/* 
+        {/*
       Facebook Open Graph meta tags
         documentation: https://developers.facebook.com/docs/sharing/opengraph */}
         <meta name='og:title' content={title} />
@@ -70,13 +70,6 @@ const Header = () => {
         />
         <meta name='theme-color' content='#000' />
         <link rel='shortcut icon' href='/icons/favicon.ico' />
-
-        {/* 
-      Twitter Summary card
-        documentation: https://dev.twitter.com/cards/getting-started
-        Be sure validate your Twitter card markup on the documentation site. */}
-        <meta name='twitter:card' content='summary' />
-        <meta name='twitter:site' content='@onirenaud' />
       </Head>
     </>
   )
