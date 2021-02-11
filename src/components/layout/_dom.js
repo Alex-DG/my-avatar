@@ -16,9 +16,11 @@ const Dom = ({ dom }) => {
     <div className='absolute top-0 left-0 right-0 z-20 dom' {...events}>
       <Header />
       {dom}
+
       <h1 className='absolute w-full text-xs tracking-wider text-center text-white text-gray-100 md:mt-56 mt-28 top-1/2 sm:subpixel-antialiased md:antialiased'>
-        REACT THREE NEXT STARTER
+        🇫BONJOUR IT'S ME, ALEX 🥖
       </h1>
+
       <div className='absolute bottom-4 right-4 z-index-30'>
         <Badge />
       </div>

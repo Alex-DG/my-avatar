@@ -1,17 +1,16 @@
 import useStore from '@/helpers/store'
 import dynamic from 'next/dynamic'
-import Go from '@/components/dom/go'
 
-const Sphere = dynamic(() => import('@/components/canvas/Sphere'), {
+const Avatar = dynamic(() => import('@/components/canvas/Avatar'), {
   ssr: false,
 })
 
 const Page = () => {
-  useStore.setState({ title: 'Sphere' })
+  useStore.setState({ title: 'Avatar' })
+
   return (
     <>
-      <Sphere r3f />
-      <Go />
+      <Avatar r3f />
     </>
   )
 }
