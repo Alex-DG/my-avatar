@@ -1,10 +1,9 @@
 import Head from 'next/head'
 
-const title = 'Threejs Next Starter'
+const title = 'Alex DG - My 3D Avatar'
 const url = 'http://r3f-next-starter.vercel.app/'
-const description =
-  'The easiest and fastest way to create a 3D website using React Three Fiber and NextJS'
-const author = 'Author'
+const description = 'My 3D avatar using React Three Fiber and NextJS'
+const author = 'Alex DG'
 
 const Header = () => {
   return (
