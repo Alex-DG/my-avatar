@@ -14,12 +14,18 @@ const Bg = () => {
   })
   return <a.color attach='background' r={bg} g={bg} b={bg} />
 }
+
 const LCanvas = ({ children }) => {
   return (
     <Canvas
       style={{
         position: 'absolute',
-        top: 0,
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: '550px',
+        height: '600px',
+        borderRadius: '10px',
       }}
       onCreated={({ events }) => {
         useStore.setState({ events })
