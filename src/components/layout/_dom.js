@@ -17,7 +17,7 @@ const Dom = ({ dom }) => {
       <Header />
       {dom}
 
-      <h1 className='absolute w-full text-xs tracking-wider text-center text-white text-gray-100 md:mt-56 mt-28 top-1/2 sm:subpixel-antialiased md:antialiased'>
+      <h1 className='absolute w-full tracking-wider text-center text-white text-gray-100 md:mt-56 mt-28 top-1/2 sm:subpixel-antialiased md:antialiased'>
         {`BONJOUR IT'S ME, ALEX 🥖`}
       </h1>
 

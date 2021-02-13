@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Movement';
+  src: url('/fonts/Movement/MovementV.ttf');
+  font-weight: 300;
+}
+
 @layer base {
   * {
     box-sizing: border-box;
@@ -18,5 +24,8 @@
   }
   html {
     background-color: #282c34;
+  }
+  h1 {
+    font-family: 'Movement';
   }
 }
