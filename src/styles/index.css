@@ -5,7 +5,7 @@
 @font-face {
   font-family: 'Movement';
   src: url('/fonts/Movement/MovementV.ttf');
-  font-weight: 300;
+  font-weight: 500;
 }
 
 @layer base {
@@ -22,10 +22,13 @@
     padding: 0;
     overflow: hidden;
   }
+
   html {
     background-color: #282c34;
   }
+
   h1 {
     font-family: 'Movement';
+    color: #fff;
   }
 }

@@ -81,7 +81,7 @@ const AvatarComponent = () => {
       <ambientLight intensity={0.5} />
       <Model />
       <Camera />
-      <Environment preset={'studio'} />
+      <Environment preset={'apartment'} />
     </Suspense>
   )
 }

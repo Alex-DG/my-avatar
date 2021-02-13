@@ -23,9 +23,8 @@ const LCanvas = ({ children }) => {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: '550px',
+        width: '100%',
         height: '600px',
-        borderRadius: '10px',
       }}
       onCreated={({ events }) => {
         useStore.setState({ events })

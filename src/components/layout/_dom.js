@@ -17,13 +17,21 @@ const Dom = ({ dom }) => {
       <Header />
       {dom}
 
-      <h1 className='absolute w-full tracking-wider text-center text-white text-gray-100 md:mt-56 mt-28 top-1/2 sm:subpixel-antialiased md:antialiased'>
-        {`BONJOUR IT'S ME, ALEX 🥖`}
+      <h1 className='absolute w-full tracking-widest text-center mt-28 top-1/2 sm:subpixel-antialiased md:antialiased'>
+        {`BONJOUR IT'S ME, `}
+        <a
+          className='hover:text-react-blue hover:line-through'
+          href='https://www.alexdiguida.com/'
+          target='_blank'
+        >
+          @Alex
+        </a>
+        {' 🥖'}
       </h1>
 
-      <div className='absolute bottom-4 right-4 z-index-30'>
-        <Badge />
-      </div>
+      {/* <div className='absolute bottom-4 right-4 z-index-30'>
+        <Badge url='https://github.com/Alex-DG' />
+      </div> */}
     </div>
   )
 }
