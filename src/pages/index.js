@@ -6,7 +6,7 @@ const Avatar = dynamic(() => import('@/components/canvas/Avatar'), {
 })
 
 const Page = () => {
-  useStore.setState({ title: 'Avatar' })
+  useStore.setState({ title: '👋 Hi!' })
 
   return (
     <>
