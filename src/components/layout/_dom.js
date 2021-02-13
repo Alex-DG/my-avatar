@@ -22,6 +22,7 @@ const Dom = ({ dom }) => {
         <a
           className='hover:text-react-blue hover:line-through'
           href='https://www.alexdiguida.com/'
+          rel='noopener noreferrer'
           target='_blank'
         >
           @Alex
