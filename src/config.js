@@ -6,7 +6,6 @@ const description = 'My 3D avatar using React Three Fiber and NextJS'
 const author = 'Alex DG'
 
 const Header = () => {
-  console.log({ GA: process.env.GA_TRACKING_ID })
   return (
     <>
       <Head>
