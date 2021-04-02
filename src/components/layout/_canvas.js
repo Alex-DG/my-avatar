@@ -4,6 +4,7 @@ import useStore from '@/helpers/store'
 import { OrbitControls, Preload } from '@react-three/drei'
 import { a, useSpring } from '@react-spring/three'
 import { EffectComposer, Vignette } from '@react-three/postprocessing'
+
 // enable shader editor
 // import { MaterialEditor, useEditorComposer } from '@three-material-editor/react'
 
@@ -18,18 +19,6 @@ const Bg = () => {
 const LCanvas = ({ children }) => {
   return (
     <Canvas
-      style={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        margin: '0 auto',
-        maxWidth: '500px',
-        transform: 'translate(-50%, -50%)',
-        width: '100%',
-        height: '600px',
-        border: 'solid 4px lightblue',
-        borderRadius: '14px',
-      }}
       onCreated={({ events }) => {
         useStore.setState({ events })
       }}
@@ -38,8 +27,10 @@ const LCanvas = ({ children }) => {
       <Bg />
       <Perf openByDefault trackGPU={true} position={'bottom-right'} />
       <OrbitControls />
+
       {/* <MaterialEditor /> */}
       {/* <EffectComposer ref={useEditorComposer()}> */}
+
       <EffectComposer>
         <Vignette eskil={false} offset={0.1} darkness={1.1} />
       </EffectComposer>
