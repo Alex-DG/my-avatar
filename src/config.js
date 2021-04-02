@@ -6,6 +6,7 @@ const description = 'My 3D avatar using React Three Fiber and NextJS'
 const author = 'Alex DG'
 
 const Header = () => {
+  console.log({ GA: process.env.GA_TRACKING_ID })
   return (
     <>
       <Head>
@@ -70,10 +71,10 @@ const Header = () => {
         <meta name='theme-color' content='#000' />
         <link rel='shortcut icon' href='/icons/favicon.ico' />
 
-        {/* Global Site Tag (gtag.js) - Google Analytics */}
+        {/* Google Analytics */}
         <script
           async
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_ID}`}
         />
         <script
           dangerouslySetInnerHTML={{
@@ -81,7 +82,7 @@ const Header = () => {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.GA_TRACKING_ID}');
+            gtag('config', '${process.env.NEXT_PUBLIC_ANALYTICS_ID}');
           `,
           }}
         />
