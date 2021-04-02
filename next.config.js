@@ -95,5 +95,10 @@ module.exports = plugins(
     ],
     withBundleAnalyzer,
   ],
-  nextConfig
+  {
+    ...nextConfig,
+    env: {
+      NEXT_PUBLIC_ANALYTICS_ID: process.env.NEXT_PUBLIC_ANALYTICS_ID,
+    },
+  }
 )
