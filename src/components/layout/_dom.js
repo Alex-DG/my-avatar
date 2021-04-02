@@ -1,5 +1,6 @@
 import useStore from '@/helpers/store'
 // import { Badge } from '@pmndrs/branding'
+import * as ga from '../../helpers/ga'
 import Head from 'next/head'
 
 const Header = () => {
@@ -12,6 +13,7 @@ const Header = () => {
 }
 const Dom = ({ dom }) => {
   const events = useStore((s) => s.events)
+
   return (
     <div className='top-0 left-0 right-0 z-20 dom' {...events}>
       <Header />
@@ -24,6 +26,12 @@ const Dom = ({ dom }) => {
           href='https://www.alexdiguida.com/'
           rel='noopener noreferrer'
           target='_blank'
+          onClick={() =>
+            ga.event({
+              action: 'onClick link!',
+              params: {},
+            })
+          }
         >
           @Alex
         </a>

@@ -98,7 +98,7 @@ module.exports = plugins(
   {
     ...nextConfig,
     env: {
-      NEXT_PUBLIC_ANALYTICS_ID: process.env.NEXT_PUBLIC_ANALYTICS_ID,
+      NEXT_PUBLIC_GOOGLE_ANALYTICS: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS,
     },
   }
 )

@@ -3,6 +3,7 @@ import useStore from '@/helpers/store'
 import { useEffect, Children } from 'react'
 import Header from '../config'
 import dynamic from 'next/dynamic'
+import * as ga from '../helpers/ga'
 import Dom from '@/components/layout/_dom'
 import '@/styles/index.css'
 
@@ -41,6 +42,21 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     useStore.setState({ router })
   }, [router])
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      ga.pageview(url)
+    }
+    //When the component is mounted, subscribe to router changes
+    //and log those page views
+    router.events.on('routeChangeComplete', handleRouteChange)
+
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
 
   return r3fArr.length > 0 ? (
     <SplitApp canvas={r3fArr} dom={compArr} />
