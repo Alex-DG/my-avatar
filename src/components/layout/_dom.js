@@ -1,5 +1,5 @@
 import useStore from '@/helpers/store'
-import { Badge } from '@pmndrs/branding'
+// import { Badge } from '@pmndrs/branding'
 import Head from 'next/head'
 
 const Header = () => {
@@ -13,11 +13,11 @@ const Header = () => {
 const Dom = ({ dom }) => {
   const events = useStore((s) => s.events)
   return (
-    <div className='absolute top-0 left-0 right-0 z-20 dom' {...events}>
+    <div className='top-0 left-0 right-0 z-20 dom' {...events}>
       <Header />
       {dom}
 
-      <h1 className='absolute w-full tracking-widest text-center mt-28 top-1/2 sm:subpixel-antialiased md:antialiased'>
+      <h1 className='w-full tracking-widest text-center mt-28 top-1/2 sm:subpixel-antialiased md:antialiased'>
         {`BONJOUR IT'S ME, `}
         <a
           className='hover:text-react-blue hover:line-through'

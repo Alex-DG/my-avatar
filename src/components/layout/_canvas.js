@@ -22,9 +22,13 @@ const LCanvas = ({ children }) => {
         position: 'absolute',
         top: '50%',
         left: '50%',
+        margin: '0 auto',
+        maxWidth: '500px',
         transform: 'translate(-50%, -50%)',
         width: '100%',
         height: '600px',
+        border: 'solid 4px lightblue',
+        borderRadius: '14px',
       }}
       onCreated={({ events }) => {
         useStore.setState({ events })
