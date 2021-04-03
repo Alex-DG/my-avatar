@@ -24,12 +24,12 @@ const LCanvas = ({ children }) => {
         top: '50%',
         left: '50%',
         margin: '0 auto',
-        // maxWidth: '500px',
         transform: 'translate(-50%, -50%)',
         width: '100%',
-        height: '100vh',
-        // border: 'solid 4px lightblue',
-        // borderRadius: '14px',
+        maxWidth: '400px',
+        height: '60%',
+        border: 'solid 4px lightblue',
+        borderRadius: '14px',
       }}
       onCreated={({ events }) => {
         useStore.setState({ events })
