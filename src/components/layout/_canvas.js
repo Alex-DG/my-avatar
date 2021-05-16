@@ -19,18 +19,6 @@ const Bg = () => {
 const LCanvas = ({ children }) => {
   return (
     <Canvas
-      style={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        margin: '0 auto',
-        transform: 'translate(-50%, -50%)',
-        width: '100%',
-        maxWidth: '400px',
-        height: '60%',
-        border: 'solid 4px lightblue',
-        borderRadius: '14px',
-      }}
       onCreated={({ events }) => {
         useStore.setState({ events })
       }}

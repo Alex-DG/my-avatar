@@ -31,4 +31,9 @@
     font-family: 'Movement';
     color: #fff;
   }
+
+  canvas {
+    border: solid 2px lightblue;
+    border-radius: 6px;
+  }
 }

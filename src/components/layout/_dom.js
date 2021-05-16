@@ -15,11 +15,11 @@ const Dom = ({ dom }) => {
   const events = useStore((s) => s.events)
 
   return (
-    <div className='absolute top-0 left-0 right-0 z-20 dom' {...events}>
+    <div {...events}>
       <Header />
       {dom}
 
-      <h1 className='w-full mt-16 tracking-widest text-center top-1/2 sm:subpixel-antialiased md:antialiased'>
+      <h1 className='w-full text-xl text-center'>
         {`BONJOUR IT'S ME, `}
         <a
           className='hover:text-react-blue hover:line-through'

@@ -20,8 +20,14 @@ function SplitApp({ canvas, dom }) {
   return (
     <>
       <Header />
-      {dom && <Dom dom={dom} />}
-      <LCanvas>{canvas && <group>{canvas}</group>}</LCanvas>
+
+      <div className='flex flex-col flex-wrap items-center justify-center h-screen gap-10'>
+        {dom && <Dom dom={dom} />}
+
+        <div className='w-11/12 rounded shadow-lg h-3/5 md:w-3/5 xl:w-1/4'>
+          <LCanvas>{canvas && <group>{canvas}</group>}</LCanvas>
+        </div>
+      </div>
     </>
   )
 }
